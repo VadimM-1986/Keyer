@@ -147,7 +147,7 @@
                         FontWeight="Bold"
                         Foreground="#fff"                     
                         FontSize="13" 
-                        Click="Button_Open_Image_Click">
+                        Click="OpenImageButtonClick">
 
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -196,7 +196,7 @@
                         FontWeight="Bold"
                         Foreground="#fff"                     
                         FontSize="13" 
-                        Click="Button_Processing_Backgraund_Image_Click"
+                        Click="ButtonProcessingBackgroundImageClick"
                         >
                     
                     <Button.Template>
@@ -246,7 +246,7 @@
                         FontWeight="Bold"
                         Foreground="#fff"                     
                         FontSize="13" 
-                        Click="Button_Save_Image_Click">
+                        Click="SaveImageClick">
 
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -309,7 +309,7 @@
                           Cursor="Hand"
                           FontWeight="Bold"  
                           FontSize="13" 
-                          SelectionChanged="Button_SelectedListColor"
+                          SelectionChanged="SelectedListColorButton"
                           SelectedIndex="0">
 
                     <TextBlock>Выбрать цвет</TextBlock>

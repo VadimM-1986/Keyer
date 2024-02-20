@@ -1,26 +1,22 @@
-﻿using Keyer.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Keyer.Model;
+using Keyer.ProjectsPresenter;
+using Keyer.Views;
 using System.Windows;
 
-namespace Keyer.Views
-{
-    public class App : Application
-    {
-        readonly MainWindow mainWindow;
+namespace Keyer;
 
-        // через систему внедрения зависимостей получаем объект главного окна
-        public App(MainWindow mainWindow)
-        {
-            this.mainWindow = mainWindow;
-        }
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            mainWindow.Show();  // отображаем главное окно на экране
-            base.OnStartup(e);
-        }
+public class App : Application
+{
+    private readonly MainWindow _mainWindow;
+
+    // через систему внедрения зависимостей получаем объект главного окна
+    public App(MainWindow mainWindow, Presenter presenter, Image service)
+    {
+        _mainWindow = mainWindow;
+    }
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        _mainWindow.Show();  // отображаем главное окно на экране
+        base.OnStartup(e);
     }
 }
